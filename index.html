@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <title>Regitration form</title>
+</head>
+<body onload="init()">
+    <div class="container w-50 px-4 pb-4 bg-light">
+        <div class="row pb-3">
+            <div class="col-12">
+                <h3 class="text-white text-center bg-primary py-3">Registration form</h3>
+                
+                <div class="alerts"></div>
+
+                <form action="" name="register" onsubmit="sent(event)">
+               
+                    <input type="text" name="name"   class="form-control border"    placeholder="Adınız">
+                    <input type="text" name="surname"   class="form-control my-2" placeholder="Soyadınız">
+                    <input type="text" name="birthday"   class="form-control my-2"     placeholder="Yaşınız">
+                    <small class="text-secondary">Tarix ISO standartına uyğun 1993-05-25 kimi olmalıdır</small>
+                    <input type="text" name="email"   class="form-control my-2"   placeholder="Emailiniz">
+                    <input type="submit" class="btn btn-primary" value="Göndər">
+                </form>
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-5">
+                <h6>Siyahıdan istifadəçi sil</h6>
+                <div class="input-group">
+                    <input class="delId form-control border border-danger" type="text"><button onclick="remove()" class="btn btn-danger px-5 ml-3"> Sil </button>
+                </div>
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-12">
+                <h6>Siyahını bunlara görə sırala</h6>
+                <div class="input-group mt-2">
+                    <button onclick="sort(event)" id="1" class="btn btn-outline-primary px-3">Id</button>
+                    <button onclick="sort(event)" id="2" class="btn btn-outline-primary px-3 ml-1">Ad</button>
+                    <button onclick="sort(event)" id="3" class="btn btn-outline-primary px-3 ml-1">Soyad</button>
+                </div>
+
+                <table class="table table-striped table-bordered mt-4">
+                    <thead class="table-primary">
+                        <th>ID</th>
+                        <th>name</th>
+                        <th>surname</th>
+                        <th>age</th>
+                        <th>email</th>
+                    </thead>
+                    <tbody class="tbody">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
